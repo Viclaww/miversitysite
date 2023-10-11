@@ -13,8 +13,8 @@ export const NavBar: FC<NavProps> = (): JSX.Element =>{
     const pathname = usePathname();
     return (
         <header className={`font-inter w-[95%] mx-auto h-fit z-50  backdrop-blur-md bg-transparent`}>
-            <nav className='flex flex-row md:flex-row-reverse mx-4 items-center justify-center md:justify-between font-mont h-20 font-medium'>
-                <span className='md:flex md:flex-row md:items-center'>
+            <nav className='flex flex-row md:flex-row-reverse mx-4 items-center justify-between md:justify-between font-mont h-20 font-medium'>
+                <span className='hidden md:flex md:flex-row md:items-center'>
                     <span className={ pathname === "/" ? 'text-lg font-medium text-[#FFA800]' : "text-gray-900 text-lg font-medium"}>
                         <Link href={"/"}>
                         Home
@@ -43,14 +43,15 @@ export const NavBar: FC<NavProps> = (): JSX.Element =>{
                     </Link>
                     </span>
                 </span>
-                <span className="block md:hidden">
-                    <RxHamburgerMenu></RxHamburgerMenu>    
-                </span>    
-                <span className='md:mx-0 md:mr-auto'>
+               
+                <span className='md:mx-0 mr-auto'>
                     <Link href={"#"}>
                     Logo
                     </Link>
                 </span>
+                <span className="block md:hidden">
+                    <RxHamburgerMenu></RxHamburgerMenu>    
+                </span>  
         </nav>
     </header>
     )
