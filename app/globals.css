@@ -2,26 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-inline: 2rem;
+  list-style-type: none;
+  overflow-x: hidden;
+}
+.moving-text:hover{
+  animation-play-state: paused;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* The animation */
+@keyframes marquee{
+  0%{transform: translateX(100%);}
+  100%{transform: translateX(-100%);}
+}
+
+/* media query to enable animation for only those who want it */
+@media (prefers-reduced-motion: no-preference) {
+  .moving-text{
+      animation: marquee 40s linear infinite;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#rowboat{
+width: 100vw;
+overflow-x: hidden;
+margin-top: 5rem;
 }
+.mentor1{
+  background-position: center;
+  background-image: url(./images/Rectangle\ 25.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mentor2{
+  background-position: center;
+  background-image: url(./images/Rectangle\ 25\ \(1\).png);
+
+}
+.mentor3{
+  background-position: center;
+  background-image: url(./images/Rectangle\ 25\ \(2\).png);
+}
+
