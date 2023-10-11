@@ -3,14 +3,13 @@ import Image from "next/image";
 import Tree from "../images/Book Tree  1.png"
 export const Hero: FC = (): JSX.Element =>{
     return(
-        <section className="w-[90%] overflow-clip mx-auto p-8 mt-6 border-gray-400 border-[1px] h-fit flex flex-col md:flex-row md:items-center md:justify-around rounded-lg"> 
-             <div className="bg-[#00E0FF] rounded-full relative -z-50 -top-20 -left-10 h-[20rem] w-[12rem]  blur-[50px]">
+        <section className="w-[90%] overflow-clip mx-auto p-8 mt-6 border-gray-400 border-[1px] h-fit flex flex-col-reverse md:flex-row md:items-center md:justify-around rounded-lg"> 
+             <div className="bg-[#00E0FF] hidden md:block rounded-full relative -z-50 -top-20 -left-10 h-[20rem] w-[12rem]  blur-[50px]">
 
             </div>
-            <section className="w-1/2 relative -left-40">
-               
+            <section className="w-full md:w-1/2 relative -left-40">
                 <header>
-                    <h1 className="text-gray-900 text-7xl font-medium">
+                    <h1 className="text-gray-900 text-center md:text-left text-7xl font-medium">
                         Path to 
                         <span className="text-[#FFA800] text-[5rem] font-bold block">Success</span>
                     </h1>
@@ -20,7 +19,7 @@ export const Hero: FC = (): JSX.Element =>{
                     Ignite your mind with knowledge. Soar to new heights with understanding. Illuminate your path with wisdom. At (name of your website), we guide you on a journey of learning and discovery
                     </p>
                 </article>
-                <div className="flex flex-row mt-4">
+                <div className="flex flex-col items-center  md:flex-row mt-4">
                     <button  className="w-fit block h-fit bg-blue-600 cursor-pointer py-2 px-4 rounded-md text-lg font-medium mr-4  text-white text-md">
                         Request Resource
                     </button>
@@ -29,7 +28,7 @@ export const Hero: FC = (): JSX.Element =>{
                     </button>
                 </div>
             </section>
-            <figure className="w-2/5">
+            <figure className="w-full md:w-2/5">
                 <Image
                 src={Tree}
                 alt="Book Tree"
@@ -38,7 +37,7 @@ export const Hero: FC = (): JSX.Element =>{
                 >
 
                 </Image>
-                <div className="bg-[#00E0FF] rounded-full relative -z-50 left-36  h-[4rem] w-[12rem]  blur-[50px]">
+                <div className="bg-[#00E0FF] hidden md:block rounded-full relative -z-50 left-36  h-[4rem] w-[12rem]  blur-[50px]">
 
                 </div>
             </figure>
