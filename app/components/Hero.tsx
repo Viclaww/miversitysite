@@ -3,7 +3,7 @@ import Image from "next/image";
 import Tree from "../images/Book Tree  1.png"
 export const Hero: FC = (): JSX.Element =>{
     return(
-        <section className="w-[90%] overflow-clip mx-auto p-8 mt-6 border-gray-900 border-[1px] h-fit flex flex-col md:flex-row md:items-center md:justify-around rounded-lg"> 
+        <section className="w-[90%] overflow-clip mx-auto p-8 mt-6 border-gray-400 border-[1px] h-fit flex flex-col md:flex-row md:items-center md:justify-around rounded-lg"> 
              <div className="bg-[#00E0FF] rounded-full relative -z-50 -top-20 -left-10 h-[20rem] w-[12rem]  blur-[50px]">
 
             </div>
