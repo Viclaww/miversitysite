@@ -6,6 +6,7 @@ import { Features } from './components/Features';
 import { Testimonials } from './components/Testimonials';
 import { Mentors } from './components/Mentors';
 import { News } from './components/News';
+import { Footer } from './components/Footer';
 export default function Home() {
   return (
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Testimonials></Testimonials>
       <Mentors></Mentors>
       <News></News>
+      <Footer></Footer>
     </>
    
   )

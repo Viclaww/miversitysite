@@ -4,6 +4,7 @@ import {FC} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { RxHamburgerMenu } from "react-icons/rx"
 interface NavProps {
     className?: String
 }
@@ -42,6 +43,9 @@ export const NavBar: FC<NavProps> = (): JSX.Element =>{
                     </Link>
                     </span>
                 </span>
+                <span className="block md:hidden">
+                    <RxHamburgerMenu></RxHamburgerMenu>    
+                </span>    
                 <span className='md:mx-0 md:mr-auto'>
                     <Link href={"#"}>
                     Logo
