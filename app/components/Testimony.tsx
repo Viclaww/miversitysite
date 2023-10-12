@@ -29,7 +29,7 @@ export const Testimonial: FC<TestimonialProps> = ({image, name, testimony}): JSX
                 <Image
                 src={Line}
                 alt="Line"
-                className="relative bottom-0"
+                className="relative bottom-0 mt-10"
                 >
 
                 </Image>

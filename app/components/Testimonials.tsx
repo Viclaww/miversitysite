@@ -7,11 +7,11 @@ import Link from "next/link";
 export const Testimonials: FC = (): JSX.Element =>{
     return(
         <section className="flex flex-col w-[90%] mx-auto my-20 items-center justify-evenly">
-            <header className="w-full flex flex-row items-center justify-between">
-                <h3 className="w-full text-5xl font-medium text-gray-900">
+            <header className="w-full flex flex-row items-center justify-around md:justify-between">
+                <h3 className="w-full text-3xl md:text-5xl font-medium text-gray-900">
                     Testimonials
                 </h3>
-                <Link className="underline text-blue-600" href={"/testimonials"}>See more</Link>
+                <Link className="underline block text-blue-600 w-40" href={"/testimonials"}>See more</Link>
             </header>
             <section className="flex flex-col md:flex-row justify-evenly mt-10 gap-5">
                 <Testimonial

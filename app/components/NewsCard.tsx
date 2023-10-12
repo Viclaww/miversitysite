@@ -21,11 +21,12 @@ export const NewsCard: FC<NewsCardProps> = ({title, image, main}): JSX.Element =
                     <button className="w-full bg-[#FFA800] h-fit py-4 rounded-md text-white text-xl">Read more</button>
                 </section>
                 :
-                    <section className="w-full flex flex-row items-center p-5">
-                        <div className="h-auto">
+                    <section className="w-full flex flex-col md:flex-row items-center p-5">
+                        <div className="w-full md:w-auto h-auto">
                             <Image
                             src={image}
                             alt={title}
+                            className="w-full md:w-auto"
                             >
 
                             </Image>

@@ -16,7 +16,7 @@ export const Features: FC = (): JSX.Element =>{
 
                 </span>
             </header>
-            <section className="w-full flex flex-col md:w-[60%] md:grid  md:grid-cols-2 gap-8">
+            <section className="w-full mt-6 md:mt-0 flex flex-col md:w-[60%] md:grid  md:grid-cols-2 gap-8">
                 <Feature 
                 iconImage={Icon2}
                 header={"Expert Instruction"}

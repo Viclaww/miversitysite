@@ -7,7 +7,7 @@ export const Hero: FC = (): JSX.Element =>{
              <div className="bg-[#00E0FF] hidden md:block rounded-full relative -z-50 -top-20 -left-10 h-[20rem] w-[12rem]  blur-[50px]">
 
             </div>
-            <section className="w-full md:w-1/2 relative -left-40">
+            <section className="w-full mt-10 md:mt-0 md:w-1/2 md:relative md:-left-40">
                 <header>
                     <h1 className="text-gray-900 text-center md:text-left text-7xl font-medium">
                         Path to 
@@ -15,7 +15,7 @@ export const Hero: FC = (): JSX.Element =>{
                     </h1>
                 </header>
                 <article className="mt-4">
-                    <p className="text-xl">
+                    <p className="text-xl text-center md:text-left">
                     Ignite your mind with knowledge. Soar to new heights with understanding. Illuminate your path with wisdom. At (name of your website), we guide you on a journey of learning and discovery
                     </p>
                 </article>
@@ -23,7 +23,7 @@ export const Hero: FC = (): JSX.Element =>{
                     <button  className="w-fit block h-fit bg-blue-600 cursor-pointer py-2 px-4 rounded-md text-lg font-medium mr-4  text-white text-md">
                         Request Resource
                     </button>
-                    <button className="w-fit block h-fit bg-white border-[1px] border-blue-600 cursor-pointer py-2 px-4 rounded-md text-lg font-medium mx-4  text-blue-600 text-md">
+                    <button className="w-fit mt-5 md:mt-0 block h-fit bg-white border-[1px] border-blue-600 cursor-pointer py-2 px-4 rounded-md text-lg font-medium mx-4  text-blue-600 text-md">
                         Contact Us
                     </button>
                 </div>
