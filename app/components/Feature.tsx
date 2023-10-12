@@ -8,7 +8,7 @@ interface FeatureProps{
 
 export const Feature: FC<FeatureProps> = ({iconImage, header, article}): JSX.Element =>{
     return (
-        <div>
+        <article>
             <Image
                 src={iconImage}
                 alt="Icon"
@@ -21,6 +21,6 @@ export const Feature: FC<FeatureProps> = ({iconImage, header, article}): JSX.Ele
             <p className="text-gray-900 font-normal  text-lg mt-2">
                 {article}
             </p>
-        </div>
+        </article>
     )
 }
