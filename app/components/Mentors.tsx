@@ -5,8 +5,8 @@ export const Mentors: FC = (): JSX.Element =>{
     return (
         <section className="flex flex-col w-[90%] mx-auto my-20 items-center justify-evenly">
             <header className="w-full flex flex-row items-center justify-between">
-                <h3 className="w-full text-5xl font-medium text-gray-900">
-                    Experienced Mentors
+                <h3 className="w-full text-center md:text-left text-3xl md:text-5xl font-medium text-gray-900">
+                    Experienced Tutors
                 </h3>
               
             </header>

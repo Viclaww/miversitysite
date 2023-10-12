@@ -3,9 +3,9 @@ import {FC} from "react";
 export const Partners: FC = (): JSX.Element =>{
     return(
         <>
-        <section className="w-full my-10 mt-20">
+        <section className="w-full mt-10 md:my-10 md:mt-20">
             <header>
-                <h1 className="text-5xl text-center text-gray-900 font-medium">
+                <h1 className="text-3xl md:text-5xl text-center text-gray-900 font-medium">
                     Our Partners
                 </h1>
             </header>

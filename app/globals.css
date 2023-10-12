@@ -22,11 +22,10 @@ ul{
 }
 
 /* media query to enable animation for only those who want it */
-@media (prefers-reduced-motion: no-preference) {
+
   .moving-text{
-      animation: marquee 40s linear infinite;
+    animation: 40s linear 1s infinite alternate marquee;
   }
-}
 #rowboat{
 width: 100vw;
 overflow-x: hidden;

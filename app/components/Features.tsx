@@ -1,42 +1,43 @@
 import { FC } from "react";
 import Image from "next/image";
-import Icon1 from "../images/Group 22.png";
-import Icon2 from "../images/Group 23.png";
-import Icon3 from "../images/Group 24.png";
-import Icon4 from "../images/Group 25.png";
+import Icon1 from "../images/cuate.png";
+import Icon2 from "../images/click-here.png";
+import Icon3 from "../images/past-questions.png";
+import Icon4 from "../images/paper-map.png";
 import { Feature } from "./Feature";
 export const Features: FC = (): JSX.Element =>{
     return(
        <section className="w-[90%] mx-auto my-20 flex flex-col md:flex-row items-center justify-evenly">
             <header className="w-full md:w-[40%]">
-                <h3 className="w-full text-5xl text-center font-medium text-gray-900">
+                <h3 className="w-full text-3xl md:text-5xl text-center font-medium text-gray-900">
                     Our Features
                 </h3>
                 <span>
 
                 </span>
             </header>
-            <section className="w-full mt-6 md:mt-0 flex flex-col md:w-[60%] md:grid  md:grid-cols-2 gap-8">
+            <section className="w-full mt-12 md:mt-0 flex flex-col md:w-[60%] md:grid  md:grid-cols-2 gap-8">
                 <Feature 
                 iconImage={Icon2}
-                header={"Expert Instruction"}
-                article={"Quality education begins with quality instruction. At MyUni, we pride ourselves on offering expert instruction that propels our students towards excellence."}
+                header={"All your needed materials at the click of a button."}
+                article={"Access to our vast library of past questions at the click of a button."}
+                ></Feature>
+                <Feature 
+                iconImage={Icon1}
+                header={"Having issues getting organized info?"}
+                article={"Our special news letter feature have been created just for you. Articles, latest updates on campus curated specially for you and your institution"}
+                ></Feature>  
+                 <Feature 
+                iconImage={Icon4}
+                header={"Can't figure out where you're going?"}
+                article={"Navigate your way around school easily with our map"}
                 ></Feature>
                 <Feature 
                 iconImage={Icon3}
-                header={"Timely Information"}
-                article={"The educational landscape is constantly evolving. We are committed to keeping our courses up-to-date with the latest information and trends."}
+                header={"Having troubles getting past questions?"}
+                article={"We offer you past questions, solutions and simulated tests at your fingertips."}
                 ></Feature>  
-                <Feature 
-                iconImage={Icon1}
-                header={"Detailed Resources"}
-                article={"The educational landscape is constantly evolving. We are committed to keeping our courses up-to-date with the latest information and trends."}
-                ></Feature>  
-                <Feature 
-                iconImage={Icon4}
-                header={"Campus Navigation"}
-                article={"We understand that ease of navigation is essential. Our concise map aspect ensures that you can move between sections of the school infrasctructure seamlessly."}
-                ></Feature>
+               
             </section>
        </section>
     )

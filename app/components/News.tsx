@@ -8,12 +8,12 @@ export const News: FC = (): JSX.Element =>{
     return (
         <section className="flex flex-col w-[90%] mx-auto my-20 items-center justify-evenly">
             <header className="w-full flex flex-row items-center justify-between">
-                <h3 className="w-full text-5xl font-medium text-gray-900">
-                    News
+                <h3 className="w-full text-center md:text-left text-3xl md:text-5xl font-medium text-gray-900">
+                    News 
                 </h3>
             
             </header>
-            <section className="w-full flex flex-col md:flex-row justify-evenly mt-20 gap-10">
+            <section className="w-full flex flex-col md:flex-row justify-evenly mt-8 md:mt-20 gap-10">
                 <div className="bg-[#E5F2FF] w-full md:w-1/2  min-h-[36rem] h-fit p-5">
                     <NewsCard main={true} title={"AI-Powered Tutoring Revolutionizes Homework Help for Students..."} image={Ai}
                     ></NewsCard>
