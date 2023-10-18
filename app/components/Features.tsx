@@ -12,9 +12,6 @@ export const Features: FC = (): JSX.Element =>{
                 <h3 className="w-full text-3xl md:text-5xl text-center font-medium text-gray-900">
                     Our Features
                 </h3>
-                <span>
-
-                </span>
             </header>
             <section className="w-full mt-12 md:mt-0 flex flex-col md:w-[60%] md:grid  md:grid-cols-2 gap-8">
                 <Feature 
@@ -25,7 +22,7 @@ export const Features: FC = (): JSX.Element =>{
                 <Feature 
                 iconImage={Icon1}
                 header={"Having issues getting organized info?"}
-                article={"Our special news letter feature have been created just for you. Articles, latest updates on campus curated specially for you and your institution"}
+                article={"Our special news feature has been created just for you. Articles, latest updates on campus curated specially for you and your institution"}
                 ></Feature>  
                  <Feature 
                 iconImage={Icon4}

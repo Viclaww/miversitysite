@@ -10,13 +10,13 @@ export const Partners: FC = (): JSX.Element =>{
                 </h1>
             </header>
             <section id="rowboat">
-            <ul  className="moving-text">
-                <li>A Brand</li>
-                <li>A brand</li>
-                <li>A brand</li>
-                <li>A brand</li>
-                <li>A brand</li>
-            </ul>
+                <ul  className="moving-text">
+                    <li>A Brand</li>
+                    <li>A brand</li>
+                    <li>A brand</li>
+                    <li>A brand</li>
+                    <li>A brand</li>
+                </ul>
             </section>
         </section>
         </>

@@ -11,7 +11,7 @@ export const Hero: FC = (): JSX.Element =>{
                 <header>
                     <h1 className="text-gray-900 text-left text-2xl  md:text-7xl font-medium">
                         Path to 
-                        <span className="text-[#FFA800] text-2xl md:text-[5rem] font-bold block">Success</span>
+                        <span className="text-[#FFA800] text-2xl md:mt-10 mt-0 md:text-[5rem] font-bold block">Success</span>
                     </h1>
                 </header>
                 <article className="mt-1 md:mt-4">
