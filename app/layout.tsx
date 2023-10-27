@@ -1,12 +1,13 @@
 import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata } from 'next';
+
+import { Inter } from 'next/font/google';
 
 const inter = Inter({ 
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter'
- })
+ });
 
 export const metadata: Metadata = {
   title: 'Miversity',
@@ -20,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} overflow-x-hidden`}>
+      <body className={`font-inter overflow-x-hidden`}>
         {children}
       </body>
     </html>

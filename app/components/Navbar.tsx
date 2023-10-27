@@ -21,7 +21,7 @@ export const NavBar: FC<NavProps> = (): JSX.Element =>{
                         </Link>
                     </span>
                     <span  className={ pathname === "/about" ? 'text-gray-900 mx-4' : "mx-4 text-gray-900 text-lg font-medium"} >
-                    <Link href={"/community"}>
+                    <Link href={"/news"}>
                         News
                     </Link>
                     </span>
