@@ -2,11 +2,7 @@ import { NavBar } from "../components/Navbar";
 import { Breaking } from "./components/Breaking";
 import { GoSearch } from "react-icons/go";
 
-export default function Layout({
-    children,
-  }: {
-    children: React.ReactNode
-  }) {
+export default function Layout() {
     return (
       <>
         <NavBar></NavBar>
