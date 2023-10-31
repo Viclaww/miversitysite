@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: 'News | Miversity',
+    title: 'About us | Miversity',
     description: 'All the latest news and updates...',
 }
 
@@ -12,9 +12,9 @@ export default function Layout({
     children: React.ReactNode
   }) {
     return (
-      <section>
-            News page
-      </section>
-
+      <>
+         {children}
+      </>
+   
     )
   }

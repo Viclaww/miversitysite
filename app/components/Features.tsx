@@ -7,7 +7,7 @@ import Icon4 from "../images/paper-map.png";
 import { Feature } from "./Feature";
 export const Features: FC = (): JSX.Element =>{
     return(
-       <section className="w-[90%] mx-auto my-20 flex flex-col md:flex-row items-center justify-evenly">
+       <section className="w-[90%] mx-auto mt-10 mb-20 flex flex-col md:flex-row items-center justify-evenly">
             <header className="w-full md:w-[40%] sr-only md:not-sr-only">
                 <h3 className="w-full text-3xl md:text-5xl text-center font-medium text-gray-900">
                     Our Features
