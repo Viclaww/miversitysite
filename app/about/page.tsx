@@ -9,10 +9,14 @@ export default function Layout() {
       <>
       <NavBar></NavBar>
       <section className="w-[95%] mx-auto">
-        <header>
-          <h1 className="w-[95%] text-[4.5rem]">
+        <header className="mt-10">
+          <h1 className="w-[95%] text-[4.5rem] hidden md:block">
             Let's connect and <br></br>
-            <span className="text-[#FFA800] text-[6rem] -mt-4 leading-4 font-semibold">Collaborate</span>
+            <span className="text-[#FFA800] text-[6rem] leading-4 font-semibold">Collaborate</span>
+          </h1>
+          <h1 className="w-[95%] text-2xl md:hidden block">
+            Let's connect and <br></br>
+            <span className="text-[#FFA800] text-5xl leading-4 font-semibold">Collaborate</span>
           </h1>
         </header>
         <article>
