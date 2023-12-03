@@ -2,8 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-ul{
+@layer components {
+  .auth-input {
+    @apply w-full md:w-4/5 flex p-2 mb-5 border-spacing-4 border-2  border-[#002B43] h-[58px] rounded-lg;
+    flex: 1 0 0;
+    align-self: stretch;
+    background: var(--Normal-White, #fff);
+  }
+}
+ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,39 +24,41 @@ ul{
   list-style-type: none;
   overflow-x: hidden;
 }
-.moving-text:hover{
+.moving-text:hover {
   animation-play-state: paused;
 }
 
 /* The animation */
-@keyframes marquee{
-  0%{transform: translateX(100%);}
-  100%{transform: translateX(-100%);}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* media query to enable animation for only those who want it */
 
-  .moving-text{
-    animation: 40s linear 1s infinite alternate marquee;
-  }
-#rowboat{
-width: 100vw;
-overflow-x: hidden;
-margin-top: 1.5rem;
+.moving-text {
+  animation: 40s linear 1s infinite alternate marquee;
 }
-.mentor1{
+#rowboat {
+  width: 100vw;
+  overflow-x: hidden;
+  margin-top: 1.5rem;
+}
+.mentor1 {
   background-position: center;
-  background-image: url(./images/Rectangle\ 25.png);
+  background-image: url("./images/Rectangle\ 25.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.mentor2{
+.mentor2 {
   background-position: center;
-  background-image: url(./images/Rectangle\ 25\ \(1\).png);
-
+  background-image: url("./images/Rectangle\ 25\ \(1\).png");
 }
-.mentor3{
+.mentor3 {
   background-position: center;
-  background-image: url(./images/Rectangle\ 25\ \(2\).png);
+  background-image: url("./images/Rectangle\ 25\ \(2\).png");
 }
-
