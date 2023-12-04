@@ -10,58 +10,56 @@
 
 @layer components {
   .auth-input {
-    @apply w-full  flex p-2  focus:border-0 h-[58px] rounded-lg;
+    @apply w-full  flex p-2 focus:outline-none  focus:border-0 h-[58px] rounded-lg;
     flex: 1 0 0;
     align-self: stretch;
     background: var(--Normal-White, #fff);
   }
-  .auth-input:focus {
-    @apply border-0;
-  }
-}
-ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-inline: 2rem;
-  list-style-type: none;
-  overflow-x: hidden;
-}
-.moving-text:hover {
-  animation-play-state: paused;
-}
 
-/* The animation */
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-inline: 2rem;
+    list-style-type: none;
+    overflow-x: hidden;
   }
-  100% {
-    transform: translateX(-100%);
+  .moving-text:hover {
+    animation-play-state: paused;
   }
-}
 
-/* media query to enable animation for only those who want it */
+  /* The animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 
-.moving-text {
-  animation: 40s linear 1s infinite alternate marquee;
-}
-#rowboat {
-  width: 100vw;
-  overflow-x: hidden;
-  margin-top: 1.5rem;
-}
-.mentor1 {
-  background-position: center;
-  background-image: url("./images/Rectangle\ 25.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.mentor2 {
-  background-position: center;
-  background-image: url("./images/Rectangle\ 25\ \(1\).png");
-}
-.mentor3 {
-  background-position: center;
-  background-image: url("./images/Rectangle\ 25\ \(2\).png");
+  /* media query to enable animation for only those who want it */
+
+  .moving-text {
+    animation: 40s linear 1s infinite alternate marquee;
+  }
+  #rowboat {
+    width: 100vw;
+    overflow-x: hidden;
+    margin-top: 1.5rem;
+  }
+  .mentor1 {
+    background-position: center;
+    background-image: url("./images/Rectangle\ 25.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mentor2 {
+    background-position: center;
+    background-image: url("./images/Rectangle\ 25\ \(1\).png");
+  }
+  .mentor3 {
+    background-position: center;
+    background-image: url("./images/Rectangle\ 25\ \(2\).png");
+  }
 }
