@@ -13,7 +13,7 @@ export const Features: FC = (): JSX.Element => {
           Our Features
         </h3>
       </header>
-      <section className="w-[60vh] mt-12 md:mt-0 grid grid-cols-1 md:w-[60%] md:grid  md:grid-cols-2 gap-32 justify-around items-center">
+      <section className=" w-full md:w-[60vh] mt-12 md:mt-0 grid grid-cols-1  md:w-[60%] md:grid  md:grid-cols-2 gap-32 justify-around items-center">
         <Feature
           iconImage={Icon2}
           header={"All your needed materials at the click of a button."}

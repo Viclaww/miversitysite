@@ -10,10 +10,13 @@
 
 @layer components {
   .auth-input {
-    @apply w-full md:w-4/5 flex p-2 mb-5 border-spacing-4 border-2  border-[#002B43] h-[58px] rounded-lg;
+    @apply w-full  flex p-2  focus:border-0 h-[58px] rounded-lg;
     flex: 1 0 0;
     align-self: stretch;
     background: var(--Normal-White, #fff);
+  }
+  .auth-input:focus {
+    @apply border-0;
   }
 }
 ul {

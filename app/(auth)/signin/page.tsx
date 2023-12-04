@@ -23,12 +23,15 @@ export default function Signin() {
             <label className="text-sm my-1 text-[#0A3E5C]" htmlFor="">
               Registration Number
             </label>
-            <input className=" auth-input" type="text" />
-            <div className="flex flex-1 relative flex-col">
-              <label className="text-sm my-1 text-[#0A3E5C]" htmlFor="">
-                Password
-              </label>
-              <span className="absolute right-2 md:right-24 cursor-pointer top-9">
+            <div className="flex flex-1 rounded-lg  p-1 bg-[#002B43]/25 mb-3 md:w-4/5 relative flex-col">
+              <input className=" auth-input" type="text" />
+            </div>
+
+            <label className="text-sm my-1 text-[#0A3E5C]" htmlFor="">
+              Password
+            </label>
+            <div className="flex flex-1 rounded-lg  p-1 bg-[#002B43]/25 mb-3 md:w-4/5 relative flex-col">
+              <span className="absolute right-2 md:right-5 cursor-pointer top-2">
                 {!visible ? (
                   <IoMdEye onClick={togglePasswordVisibility} size={28} />
                 ) : (
@@ -37,7 +40,7 @@ export default function Signin() {
               </span>
               <input
                 id="password"
-                className="auth-input"
+                className="auth-input mb-0 md:w-full "
                 type={visible ? "text" : "password"}
               />
             </div>
@@ -47,9 +50,9 @@ export default function Signin() {
             </button>
             <p>
               Don’t have an account?{" "}
-              <Link href={"/"} className="text-[#2894F8]">
+              <Link href={"/signup"} className="text-[#2894F8]">
                 Sign up
-              </Link>{" "}
+              </Link>
             </p>
           </form>
         </div>
