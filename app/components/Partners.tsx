@@ -1,6 +1,4 @@
-import Image from "next/image";
 import {FC} from "react";
-import IkedaTribe from "../images/ikedatribe.png"
 
 export const Partners: FC = (): JSX.Element =>{
     return(
@@ -13,12 +11,7 @@ export const Partners: FC = (): JSX.Element =>{
             </header>
             <section id="rowboat">
                 <ul  className="moving-text">
-                    <li className="w-40 h-40">
-                        <Image
-                        src={IkedaTribe}
-                        alt="The Ikeda Tribe"
-                        ></Image>
-                    </li>
+                    <li>A Brand</li>
                     <li>A brand</li>
                     <li>A brand</li>
                     <li>A brand</li>

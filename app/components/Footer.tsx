@@ -1,15 +1,9 @@
 import Link from "next/link";
 import {FC} from "react";
 import { BiLogoFacebookSquare, BiLogoTwitter, BiLogoInstagram} from "react-icons/bi";
-
-interface Footer{
-    className?: String,
-    children?: []
-}
-
-export const Footer: FC<Footer> = ({className}): JSX.Element =>{
+export const Footer: FC = (): JSX.Element =>{
     return (
-        <footer className={`h-fit flex flex-col px-4 pt-8 w-full lg:p-20 bg-blue-800 text-white ${className}`}>
+        <footer className="h-fit flex flex-col px-4 pt-8 w-full lg:p-20 bg-blue-800 text-white">
             <div className="flex flex-row justify-between items-center">
                 <Link href={"/"}>Logo</Link>
                 <div>
@@ -21,7 +15,7 @@ export const Footer: FC<Footer> = ({className}): JSX.Element =>{
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row items-center justify-center bottom-4 w-fit pt-4 pb-4 mx-auto">
+            <div className="flex flex-row items-center justify-center bottom-0 w-fit pt-4 mx-auto">
                 Copyright c Miversity all rights reversed
             </div>
         </footer>

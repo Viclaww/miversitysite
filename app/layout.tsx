@@ -1,12 +1,12 @@
 import './globals.css'
 import type { Metadata } from 'next';
 
-import { Roboto } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-const roboto = Roboto({ 
+const inter = Inter({ 
   subsets: ['latin'],
-  variable: '--font-inter',
-  weight: '500'
+  display: 'swap',
+  variable: '--font-inter'
  });
 
 export const metadata: Metadata = {
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode,
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} font-inter overflow-x-hidden`}>
+      <body className={`font-inter overflow-x-hidden`}>
         {children}
       </body>
     </html>
