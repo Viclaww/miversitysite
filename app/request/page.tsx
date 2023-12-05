@@ -116,8 +116,8 @@ export default function Page() {
             </button>
           </form>
         ) : (
-          <div className="flex text-center px-20 w-full h-[60vh] justify-center items-center">
-            <h2 className="text-5xl font-bold leading-relaxed ">
+          <div className="flex text-center px-1 md:px-20  w-full h-[60vh] justify-center items-center">
+            <h2 className=" text-2xl   md:text-5xl font-bold leading-relaxed ">
               Thank you for requesting this resource it will be delivered to you
               <br />
               Via E-mail
