@@ -23,14 +23,14 @@ export default function Signin() {
             <label className="text-sm my-1 text-[#0A3E5C]" htmlFor="">
               Registration Number
             </label>
-            <div className="flex flex-1 rounded-lg  p-1 bg-[#002B43]/25 mb-3 md:w-4/5 relative flex-col">
+            <div className="flex flex-1 rounded-lg border-black border-[1px] p-1 bg-[#002B43]/25 mb-3 md:w-4/5 relative flex-col">
               <input className=" auth-input" type="text" />
             </div>
 
             <label className="text-sm my-1 text-[#0A3E5C]" htmlFor="">
               Password
             </label>
-            <div className="flex flex-1 rounded-lg  p-1 bg-[#002B43]/25 mb-3 md:w-4/5 relative flex-col">
+            <div className="flex flex-1 border-black border-[1px] rounded-lg  p-1 bg-[#002B43]/25 mb-3 md:w-4/5 relative flex-col">
               <span className="absolute right-2 md:right-5 cursor-pointer top-2">
                 {!visible ? (
                   <IoMdEye onClick={togglePasswordVisibility} size={28} />

@@ -3,6 +3,7 @@
 import { FC, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import blueLogo from "../images/logoo-removebg.png";
 import { usePathname } from "next/navigation";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 interface NavProps {
@@ -70,7 +71,7 @@ export const NavBar: FC<NavProps> = (): JSX.Element => {
               </li>
               <li className="py-5">
                 <span className=" z-50">
-                  <Link className="w-fit z-50 h-32 " href={"/auth/signup/"}>
+                  <Link className="w-fit z-50 h-32 " href={"/request"}>
                     <button className="z-50 w-fit block h-fit bg-[#FFA800] cursor-pointer py-2 px-2  font-medium   text-white text-lg">
                       Request resource
                     </button>
@@ -124,7 +125,7 @@ export const NavBar: FC<NavProps> = (): JSX.Element => {
               <Link href={"/about"}>About Us</Link>
             </span>
             <span className="mx-4 z-50">
-              <Link className="w-fit z-50 h-32 " href={"/signin/"}>
+              <Link className="w-fit z-50 h-32 " href={"/request"}>
                 <button className="z-50 w-fit block h-fit bg-[#FFA800] cursor-pointer py-2 px-2 text-lg font-medium mx-4  text-white text-md">
                   Request resource
                 </button>
@@ -133,7 +134,9 @@ export const NavBar: FC<NavProps> = (): JSX.Element => {
           </span>
 
           <span className="md:mx-0 mr-auto">
-            <Link href={"#"}>Logo</Link>
+            <Link href={"#"}>
+              <Image alt="logo" className="w-10 h-10" src={blueLogo} />
+            </Link>
           </span>
           <button
             className="block md:hidden"
