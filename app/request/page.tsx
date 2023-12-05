@@ -47,7 +47,7 @@ export default function Page() {
               <input
                 value={emailInput}
                 required={true}
-                onChange={(e: React.FormEvent) => setEmailInput(e.target.value)}
+                onChange={(e) => setEmailInput(e.target.value)}
                 className=" auth-input w-full "
                 type="email"
               />
@@ -59,7 +59,7 @@ export default function Page() {
               <input
                 value={regNo}
                 required={true}
-                onChange={(e: React.FormEvent) => setRegNo(e.target.value)}
+                onChange={(e) => setRegNo(e.target.value)}
                 className=" auth-input"
                 type="text"
               />
@@ -74,9 +74,7 @@ export default function Page() {
               <input
                 value={resourceName}
                 required={true}
-                onChange={(e: React.FormEvent) =>
-                  setResourceName(e.target.value)
-                }
+                onChange={(e) => setResourceName(e.target.value)}
                 className=" auth-input"
                 type="text"
               />
@@ -88,9 +86,7 @@ export default function Page() {
               <input
                 value={resourceType}
                 required={true}
-                onChange={(e: React.FormEvent) =>
-                  setResourceType(e.target.value)
-                }
+                onChange={(e) => setResourceType(e.target.value)}
                 className=" auth-input"
                 type="text"
               />
