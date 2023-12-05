@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { Footer } from "../components/Footer";
 import { ThreeDots } from "react-loader-spinner";
 import { useRequestResourceMutation } from "../data/api/resourceSlice";
+import { MdOutlineWarning } from "react-icons/md";
+import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 
 export default function Page() {
   const [emailInput, setEmailInput] = useState("");
@@ -30,30 +32,20 @@ export default function Page() {
       email: emailInput,
       regNo,
     };
+
     updatePost(requestData);
-  };
-
-  // handling error
-
-  const errorHandler = () => {
-    if (error) {
-      if ("status" in error) {
-        // you can access all properties of `FetchBaseQueryError` here
-        const errMsg = "error" in error ? error.error : error.data.message;
-
-        return (
-          <div className="bg-red-200 w-full text-red-800 text-xs p-2 rounded-lg">
-            <div>An error has occurred:{errMsg}</div>
-          </div>
-        );
-      }
-    }
   };
 
   return (
     <>
+      <ProgressBar
+        height="4px"
+        color="blue"
+        options={{ showSpinner: false }}
+        shallowRouting
+      />
       <NavBar />
-      <section className="w-[90vw] md:w-[60vw] flex justify-between items-center mx-auto h-auto p-5 md:p-10 rounded-xl my-5 md:my-16  bg-auth ">
+      <section className="w-[90vw] md:w-[60vw] flex justify-between items-center mx-auto h-auto p-5 md:p-10 rounded-xl my-5 md:my-12  bg-auth ">
         {!isSuccess ? (
           <form className="flex flex-col w-full">
             <h2 className="text-4xl font-bold mb-3">Request Resources</h2>
@@ -100,15 +92,32 @@ export default function Page() {
               Resource Type
             </label>
             <div className="flex flex-1 rounded-lg border-black border-[1px]  p-2 bg-auth mb-3 md:w-full relative flex-col">
-              <input
-                value={resourceType}
-                required={true}
+              <select
                 onChange={(e) => setResourceType(e.target.value)}
-                className=" auth-input"
-                type="text"
-              />
+                className="auth-input placeholder:text-black"
+                placeholder=""
+                value={resourceType}
+                id=""
+              >
+                <option value="">Select Resource Type</option>
+                <option value="Text-Book"> Textbook</option>
+                <option value="Past Questions"> Past Questions</option>
+                <option value="Manual">Manual</option>
+              </select>
             </div>
-            {isError && errorHandler()}
+            {isError && error && (
+              <div className="bg-red-200 rounded-lg text-red-900 p-3">
+                {"status" in error && error.status === 500 ? (
+                  <p className="flex font-bold ">
+                    <MdOutlineWarning className="mx-1" size={28} /> Please Use
+                    correct email!
+                  </p>
+                ) : (
+                  <div>An error occurred: {JSON.stringify(error)}</div>
+                )}
+              </div>
+            )}
+
             <button
               type="submit"
               disabled={!canAddRequest || isLoading}
