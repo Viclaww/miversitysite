@@ -19,7 +19,7 @@ export default function Page() {
 
   const [
     updatePost, // This is the mutation trigger
-    { isLoading, isSuccess }, // This is the destructured mutation result
+    { isLoading, isSuccess, isError, error }, // This is the destructured mutation result
   ] = useRequestResourceMutation();
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -33,10 +33,27 @@ export default function Page() {
     updatePost(requestData);
   };
 
+  // handling error
+
+  const errorHandler = () => {
+    if (error) {
+      if ("status" in error) {
+        // you can access all properties of `FetchBaseQueryError` here
+        const errMsg = "error" in error ? error.error : error.data.message;
+
+        return (
+          <div className="bg-red-200 w-full text-red-800 text-xs p-2 rounded-lg">
+            <div>An error has occurred:{errMsg}</div>
+          </div>
+        );
+      }
+    }
+  };
+
   return (
     <>
       <NavBar />
-      <section className="w-[90vw] md:w-[60vw]   flex justify-between items-center mx-auto h-auto p-5 md:p-10 rounded-xl my-5 md:my-16  bg-auth ">
+      <section className="w-[90vw] md:w-[60vw] flex justify-between items-center mx-auto h-auto p-5 md:p-10 rounded-xl my-5 md:my-16  bg-auth ">
         {!isSuccess ? (
           <form className="flex flex-col w-full">
             <h2 className="text-4xl font-bold mb-3">Request Resources</h2>
@@ -91,11 +108,12 @@ export default function Page() {
                 type="text"
               />
             </div>
+            {isError && errorHandler()}
             <button
               type="submit"
-              disabled={!canAddRequest}
+              disabled={!canAddRequest || isLoading}
               onClick={handleSubmit}
-              className="bg-[#FFA800] py-2 my-3 w-full flex rounded-lg font-semibold md:rounded-none justify-center self-end md:w-1/5 hover:bg-[#EEA000] disabled:bg-opacity-25 disabled:cursor-default"
+              className="bg-[#FFA800] py-2 my-3 w-full flex rounded-lg font-semibold md:rounded-none justify-center self-end md:w-1/5 hover:bg-[#EEA000] disabled:bg-opacity-50 disabled:cursor-default"
             >
               {isLoading ? (
                 <ThreeDots
