@@ -1,4 +1,5 @@
 import Image from "next/image";
+import React from "react";
 import { NavBar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Partners } from "./components/Partners";
