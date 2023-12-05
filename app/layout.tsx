@@ -23,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} font-poppins overflow-x-hidden`}>
+        <StoreProvider>
         {children}
+        </StoreProvider>
       </body>
     </html>
   );

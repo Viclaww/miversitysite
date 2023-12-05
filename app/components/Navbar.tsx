@@ -134,7 +134,7 @@ export const NavBar: FC<NavProps> = (): JSX.Element => {
           </span>
 
           <span className="md:mx-0 mr-auto">
-            <Link href={"#"}>
+            <Link href={"/"}>
               <Image alt="logo" className="w-10 h-10" src={blueLogo} />
             </Link>
           </span>
