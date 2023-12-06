@@ -16,7 +16,7 @@ export const NavBar: FC<NavProps> = (): JSX.Element => {
   return (
     <>
       {dropDownVisible && (
-        <section className="w-[100vw] h-[100vh] bg-[#1313139b] fixed z-[9999] ">
+        <section className="w-[100vw] font-poppins h-[100vh] bg-[#1313139b] fixed z-[9999] ">
           <div className=" bg-white h-fit w-[90%] mx-auto rounded-xl mt-40 p-5">
             <div className="w-full flex flex-row justify-end text-right">
               <RxCross1
