@@ -6,6 +6,8 @@ import { ThreeDots } from "react-loader-spinner";
 import { useRequestResourceMutation } from "../data/api/resourceSlice";
 import { MdOutlineWarning } from "react-icons/md";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
+import Image from "next/image";
+import whiteLogo from "../images/Miversity_whiteonblack-removebg-preview (1).png";
 
 export default function Page() {
   const [emailInput, setEmailInput] = useState("");
@@ -45,17 +47,19 @@ export default function Page() {
         shallowRouting
       />
       <NavBar />
-      <section className="w-[90vw] md:w-[60vw] flex justify-between items-center mx-auto h-auto p-5 md:p-10 rounded-xl my-5 md:my-12  bg-auth ">
+
+      <section className="w-[90vw] md:w-[60vw]  font-poppins flex justify-between items-center mx-auto h-auto p-5 md:p-10 rounded-xl my-5 md:my-16  bg-auth ">
+
         {!isSuccess ? (
           <form className="flex flex-col w-full">
             <h2 className="text-4xl font-bold mb-3">Request Resources</h2>
             <label className="text-md my-1 text-[#0A3E5C]" htmlFor="">
-              E-mail *
+              E-mail
             </label>
             <div className="flex flex-1 rounded-lg border-black border-[1px] w-full p-2 bg-auth mb-3 md:w-full relative flex-col">
               <input
                 value={emailInput}
-                required={true}
+                required= {true}
                 onChange={(e) => setEmailInput(e.target.value)}
                 className=" auth-input w-full "
                 type="email"
@@ -140,10 +144,11 @@ export default function Page() {
           </form>
         ) : (
           <div className="flex text-center px-1 md:px-20  w-full h-[60vh] justify-center items-center">
-            <h2 className=" text-2xl   md:text-5xl font-bold leading-relaxed ">
-              Thank you for requesting this resource it will be delivered to you
+            <h2 className=" text-2xl   md:text-5xl font-normal leading-relaxed ">
+             Resource request successful. It will be delivered to you within the next 24 hours.
               <br />
-              Via E-mail
+              Thank you for choosing Miversity!
+              
             </h2>
           </div>
         )}
