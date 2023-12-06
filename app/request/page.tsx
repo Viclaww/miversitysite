@@ -145,7 +145,7 @@ export default function Page() {
         ) : (
           <div className="flex text-center px-1 md:px-20  w-full h-[60vh] justify-center items-center">
             <h2 className=" text-2xl   md:text-5xl font-normal leading-relaxed ">
-             Resource request successful. It will be delivered to you within the next 24 hours.
+             Resource request successful. It will be delivered to you within the next 24 hours. Check your mail for updates.
               <br />
               Thank you for choosing Miversity!
               
