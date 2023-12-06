@@ -61,12 +61,12 @@ export const NavBar: FC<NavProps> = (): JSX.Element => {
               <li className="py-5">
                 <span
                   className={
-                    pathname === "/about"
+                    pathname === "/contact-us"
                       ? "text-xl font-medium text-[#FFA800]"
                       : " text-gray-900 text-xl font-medium"
                   }
                 >
-                  <Link href={"/about"}>About Us</Link>
+                  <Link href={"/contact-us"}>Contact Us</Link>
                 </span>
               </li>
               <li className="py-5">
@@ -117,12 +117,12 @@ export const NavBar: FC<NavProps> = (): JSX.Element => {
             </span>
             <span
               className={
-                pathname === "/about"
+                pathname === "/contant-us"
                   ? "mx-4 text-lg font-medium text-[#FFA800]"
                   : "mx-4 text-gray-900 text-lg font-medium"
               }
             >
-              <Link href={"/about"}>About Us</Link>
+              <Link href={"/contact-us"}>Contact Us</Link>
             </span>
             <span className="mx-4 z-50">
               <Link className="w-fit z-50 h-32 " href={"/request"}>
