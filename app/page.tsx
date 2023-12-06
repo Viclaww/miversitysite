@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { NavBar } from "./components/Navbar";
@@ -8,9 +9,16 @@ import { Testimonials } from "./components/Testimonials";
 import { Mentors } from "./components/Mentors";
 import { News } from "./components/News";
 import { Footer } from "./components/Footer";
+import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 export default function Home() {
   return (
     <>
+      <ProgressBar
+        height="4px"
+        color="blue"
+        options={{ showSpinner: false }}
+        shallowRouting
+      />
       <NavBar></NavBar>
       <Hero></Hero>
       <Features></Features>

@@ -4,9 +4,10 @@ import React, { useState } from "react";
 import { Footer } from "../components/Footer";
 import { ThreeDots } from "react-loader-spinner";
 import { useRequestResourceMutation } from "../data/api/resourceSlice";
+import { MdOutlineWarning } from "react-icons/md";
+import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import Image from "next/image";
 import whiteLogo from "../images/Miversity_whiteonblack-removebg-preview (1).png";
-
 
 export default function Page() {
   const [emailInput, setEmailInput] = useState("");
@@ -22,7 +23,7 @@ export default function Page() {
 
   const [
     updatePost, // This is the mutation trigger
-    { isLoading, isSuccess }, // This is the destructured mutation result
+    { isLoading, isSuccess, isError, error }, // This is the destructured mutation result
   ] = useRequestResourceMutation();
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -33,13 +34,22 @@ export default function Page() {
       email: emailInput,
       regNo,
     };
+
     updatePost(requestData);
   };
 
   return (
     <>
+      <ProgressBar
+        height="4px"
+        color="blue"
+        options={{ showSpinner: false }}
+        shallowRouting
+      />
       <NavBar />
+
       <section className="w-[90vw] md:w-[60vw]  font-poppins flex justify-between items-center mx-auto h-auto p-5 md:p-10 rounded-xl my-5 md:my-16  bg-auth ">
+
         {!isSuccess ? (
           <form className="flex flex-col w-full">
             <h2 className="text-4xl font-bold mb-3">Request Resources</h2>
@@ -86,19 +96,37 @@ export default function Page() {
               Resource Type
             </label>
             <div className="flex flex-1 rounded-lg border-black border-[1px]  p-2 bg-auth mb-3 md:w-full relative flex-col">
-              <input
-                value={resourceType}
-                required={true}
+              <select
                 onChange={(e) => setResourceType(e.target.value)}
-                className=" auth-input"
-                type="text"
-              />
+                className="auth-input placeholder:text-black"
+                placeholder=""
+                value={resourceType}
+                id=""
+              >
+                <option value="">Select Resource Type</option>
+                <option value="Text-Book"> Textbook</option>
+                <option value="Past Questions"> Past Questions</option>
+                <option value="Manual">Manual</option>
+              </select>
             </div>
+            {isError && error && (
+              <div className="bg-red-200 rounded-lg text-red-900 p-3">
+                {"status" in error && error.status === 500 ? (
+                  <p className="flex font-bold ">
+                    <MdOutlineWarning className="mx-1" size={28} /> Please Use
+                    correct email!
+                  </p>
+                ) : (
+                  <div>An error occurred: {JSON.stringify(error)}</div>
+                )}
+              </div>
+            )}
+
             <button
               type="submit"
-              disabled={!canAddRequest}
+              disabled={!canAddRequest || isLoading}
               onClick={handleSubmit}
-              className="bg-[#FFA800] py-2 my-3 w-full flex rounded-lg font-semibold md:rounded-none justify-center self-end md:w-1/5 hover:bg-[#EEA000] disabled:bg-opacity-25 disabled:cursor-default"
+              className="bg-[#FFA800] py-2 my-3 w-full flex rounded-lg font-semibold md:rounded-none justify-center self-end md:w-1/5 hover:bg-[#EEA000] disabled:bg-opacity-50 disabled:cursor-default"
             >
               {isLoading ? (
                 <ThreeDots
