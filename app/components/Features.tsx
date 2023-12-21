@@ -7,13 +7,13 @@ import Icon4 from "../images/paper-map.png";
 import { Feature } from "./Feature";
 export const Features: FC = (): JSX.Element => {
   return (
-    <section className="w-[90%] mx-auto my-20 flex flex-col md:flex-row items-center justify-evenly">
+    <section className="w-[90%] mx-auto my-20 flex flex-col  items-center justify-evenly">
       <header className="w-full md:w-[40%] sr-only md:not-sr-only">
         <h3 className="w-full text-3xl md:text-5xl text-center font-medium text-gray-900">
           Our Features
         </h3>
       </header>
-      <section className="w-full mt-12 md:mt-0 flex flex-col md:w-[60%] md:grid  md:grid-cols-2 gap-8">
+      <section className="w-full features py-6  overflow-x-scroll mt-12 md:mt-10 flex md:flex-row flex-col justify-between ">
         <Feature
           iconImage={Icon2}
           header={"All your needed materials at the click of a button."}

@@ -9,6 +9,24 @@
 }
 
 @layer components {
+  ::webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+
+  ::webkit-scrollbar-thumb {
+    background-color: #4a5568; /* Color of the thumb */
+    border-radius: 6px; /* Make the thumb round */
+  }
+
+  ::webkit-scrollbar-track {
+    background-color: #cbd5e0; /* Color of the track */
+    border-radius: 8px; /* Make the track round */
+  }
+  .hero {
+    background-image: url("./images/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .auth-input {
     @apply w-full  flex p-2 focus:outline-none  focus:border-0 h-[58px] rounded-lg;
     flex: 1 0 0;

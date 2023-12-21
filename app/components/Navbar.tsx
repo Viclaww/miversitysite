@@ -3,7 +3,7 @@
 import { FC, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import blueLogo from "../images/logoo-removebg.png";
+import blueLogo from "../images/Group 133.png";
 import { usePathname } from "next/navigation";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 interface NavProps {
@@ -135,7 +135,7 @@ export const NavBar: FC<NavProps> = (): JSX.Element => {
 
           <span className="md:mx-0 mr-auto">
             <Link href={"/"}>
-              <Image alt="logo" className="w-10 h-10" src={blueLogo} />
+              <Image alt="logo" className=" h-10" src={blueLogo} />
             </Link>
           </span>
           <button
