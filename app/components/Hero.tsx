@@ -6,13 +6,13 @@ export const Hero: FC = (): JSX.Element => {
   return (
     <section className="h-[90vh] justify-center bg-center hero flex flex-col p-10 md:p-24">
       <div className="md:w-1/2 flex flex-col">
-        <h3 className="md:text-7xl text-5xl  font-bold text-white">
+        <h3 className="md:text-7xl text-4xl  font-bold text-white">
           Pave a Path to
           <span className="text-[#FFA800]">
             <br /> Success
           </span>
         </h3>
-        <p className="text-lg  my-8 font-medium text-white">
+        <p className="md:text-lg text-sm my-8 font-medium text-white">
           With Miversity,get access to your university on the go, at the comfort
           of your smartphone
         </p>
